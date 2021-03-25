@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DentalApp</string>
+    <!-- Strings del splash-->
+    <string name="slogan">Tu camino hacia una sonrisa brillante</string>
+</resources>
