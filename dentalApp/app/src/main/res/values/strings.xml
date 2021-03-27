@@ -12,4 +12,5 @@
     <string name="signUpLogin"><b><u>¿Sin cuenta? Registrate aquí</u></b></string>
     <string name="orLogin">O inicia con</string>
     <string name="googleLogin">Iniciar sesión con Google</string>
+    <string name="logoDescription">Logo de la app</string>
 </resources>
