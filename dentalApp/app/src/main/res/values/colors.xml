@@ -10,4 +10,7 @@
     <!--Colors from splash-->
     <color name="azul_base_app">#00c2dd</color>
     <color name="slogan_color">#0099FF</color>
+    <!--Colors Login-->
+    <color name="someTextLogin">#435660</color>
+    <color name="linkLogin">#F4D35E</color>
 </resources>

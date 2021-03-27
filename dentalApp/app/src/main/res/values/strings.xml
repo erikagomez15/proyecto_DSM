@@ -2,4 +2,14 @@
     <string name="app_name">DentalApp</string>
     <!-- Strings del splash-->
     <string name="slogan">Tu camino hacia una sonrisa brillante</string>
+    <!-- String de Login-->
+    <string name="wellcomeLogin">¡Bienvenido de nuevo!</string>
+    <string name="signIn">Inicia sesión para continuar</string>
+    <string name="userLogin">Usuario</string>
+    <string name="passwordLogin">Contraseña</string>
+    <string name="forgetPassword"><b><u>¿Olvidó su contraseña? De click aquí</u></b></string>
+    <string name="passLogin">Iniciar sesión</string>
+    <string name="signUpLogin"><b><u>¿Sin cuenta? Registrate aquí</u></b></string>
+    <string name="orLogin">O inicia con</string>
+    <string name="googleLogin">Iniciar sesión con Google</string>
 </resources>
