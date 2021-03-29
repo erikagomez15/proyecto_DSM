@@ -95,20 +95,20 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="308dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            android:layout_marginBottom="5dp"
             android:background="@null"
             android:elevation="0dp"
-            android:text="@string/forgetPassword"
-            android:textColor="@color/linkLogin"
-            app:backgroundTint="@color/white"
             android:fontFamily="@font/telex"
-            android:textSize="11sp"
-            android:layout_marginBottom="5dp"
+            android:onClick="forgetPassword"
+            android:text="@string/forgetPassword"
             android:textAlignment="viewEnd"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            />
+            android:textColor="@color/linkLogin"
+            android:textSize="11sp"
+            app:backgroundTint="@color/white" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"

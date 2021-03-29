@@ -13,4 +13,10 @@
     <string name="orLogin">O inicia con</string>
     <string name="googleLogin">Iniciar sesión con Google</string>
     <string name="logoDescription">Logo de la app</string>
+    <!--Forget password-->
+    <string name="tittleFP">Recuperar contraseña</string>
+    <string name="emailFP">Correo electronico</string>
+    <string name="indicationsFP">INTRODUZCA EL CORREO ELECTRONICO DE LA CUENTA QUE DESEA RECUPERAR</string>
+    <string name="sendMailFP">Enviar correo</string>
+    <string name="descriptionIMGFP">Imagen de candado</string>
 </resources>
