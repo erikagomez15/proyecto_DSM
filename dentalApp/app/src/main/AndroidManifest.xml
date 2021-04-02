@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DentalApp">
-        <activity android:name=".signUp"></activity>
+        <activity android:name=".sign_up3"></activity>
+        <activity android:name=".sign_up2" />
+        <activity android:name=".signUp" />
         <activity android:name=".forgetPassword" />
         <activity android:name=".login" />
         <activity android:name=".dashboard" />

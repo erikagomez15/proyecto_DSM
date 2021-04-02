@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         //Animations
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, login.class);
+                Intent intent = new Intent(getApplicationContext(), login.class);
                 Pair[] pairs = new Pair[3];
                 pairs[0] = new Pair<View, String>(imgvAppLogo, "logo_transition");
                 pairs[1] = new Pair<View, String>(txtvAppName, "logoText_transition");

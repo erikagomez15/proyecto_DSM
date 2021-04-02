@@ -19,4 +19,32 @@
     <string name="indicationsFP">INTRODUZCA EL CORREO ELECTRONICO DE LA CUENTA QUE DESEA RECUPERAR</string>
     <string name="sendMailFP">Enviar correo</string>
     <string name="descriptionIMGFP">Imagen de candado</string>
+    <!-- Create account-->
+    <string name="titleCA">Crea tu cuenta</string>
+    <string name="nameCA">Nombres</string>
+    <string name="surnameCA">Apellidos</string>
+    <string name="userCA">Nombre de usuario</string>
+    <string name="mailCA">Correo Electrónico</string>
+    <string name="phoneNumberCA">Número de Teléfono</string>
+    <string name="passwordCA">Contraseña</string>
+    <string name="confirmPasswordCA">Confirma contraseña</string>
+    <string name="nextCA">Sguiente</string>
+    <string name="loginCA"><b><u>¿Ya tienes cuenta? Inicia sesión</u></b></string>
+    <string name="genderCA">Selecciona tu Genero</string>
+    <string name="gender1CA">Masculino</string>
+    <string name="gender2CA">Femenino</string>
+    <string name="gender3CA">Queer</string>
+    <string name="birthCA">Selecciona tu fecha de nacimiento</string>
+    <string name="createCA">Crear cuenta</string>
+    <string name="indicationsCA">Ingresa los datos requeridos</string>
+    <string name="descriptionBtnBackCA">Regresar</string>
+    <!--Menu -->
+    <string name="item1M">Configuraciones</string>
+    <string name="item2M">Ver citas proximas</string>
+    <string name="item3M">Agendar cita</string>
+    <string name="item4M">Catalogo de servicios</string>
+    <string name="item5M">Expediente</string>
+    <string name="item6M">Ayuda</string>
+    <string name="openM">Abrir</string>
+    <string name="closeM">Cerrar</string>
 </resources>
