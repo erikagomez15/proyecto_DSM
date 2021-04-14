@@ -30,4 +30,10 @@ public class login extends AppCompatActivity {
         finish();
     }
 
+    public void Login(View view){
+        //Aqui iria el codigo del Login
+        Intent intent = new Intent(login.this, dashboard.class);
+        startActivity(intent);
+    }
+
 }

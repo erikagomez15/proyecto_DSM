@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_hom"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_config"
+            android:icon="@drawable/ic_baseline_config_24"
+            android:title="@string/item1M" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_baseline_help_outline_24"
+            android:title="@string/item6M" />
+    </group>
+
+    <item android:title="@string/titleDatesM">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_addAppointment"
+                    android:icon="@drawable/ic_baseline_add_white_24"
+                    android:title="@string/item3M" />
+                <item
+                    android:id="@+id/nav_seeAppointments"
+                    android:icon="@drawable/ic_baseline_remove_white_eye_24"
+                    android:title="@string/item2M" />
+                <item
+                    android:id="@+id/nav_reports"
+                    android:icon="@drawable/ic_baseline_library_books_24"
+                    android:title="@string/item7M" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/titleCataloueM">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menu_seeServices"
+                    android:icon="@drawable/ic_baseline_remove_white_eye_24"
+                    android:title="@string/item8M" />
+                <item
+                    android:id="@+id/nav_addServices"
+                    android:icon="@drawable/ic_baseline_add_white_24"
+                    android:title="@string/item9M" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -43,8 +43,16 @@
     <string name="item2M">Ver citas proximas</string>
     <string name="item3M">Agendar cita</string>
     <string name="item4M">Catalogo de servicios</string>
-    <string name="item5M">Expediente</string>
+    <string name="item5M">Expedientes</string>
     <string name="item6M">Ayuda</string>
+    <string name="item7M">Reporte de citas</string>
     <string name="openM">Abrir</string>
     <string name="closeM">Cerrar</string>
+    <string name="home">Inicio</string>
+    <string name="titleDatesM">Citas</string>
+    <string name="titleCataloueM">Catalogo</string>
+    <string name="item8M">Ver servicios</string>
+    <string name="item9M">Agregar servicios</string>
+    <string name="navigation_drawer_open">Abrir Menu</string>
+    <string name="navigation_drawer_close">Cerrar Menu</string>
 </resources>

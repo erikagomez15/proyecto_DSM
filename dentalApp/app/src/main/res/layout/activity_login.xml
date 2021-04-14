@@ -119,6 +119,7 @@
             android:backgroundTint="@color/azul_base_app"
             android:text="@string/passLogin"
             android:fontFamily="@font/telex"
+            android:onClick="Login"
             />
 
         <Button
