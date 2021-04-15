@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/appicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DentalApp">
-        <activity android:name=".listOfAppointments"></activity>
+        <activity android:name=".addCatalogue"></activity>
+        <activity android:name=".listOfAppointments" />
         <activity android:name=".editAppointment" />
         <activity android:name=".addAppointment" />
         <activity android:name=".sign_up3" />
