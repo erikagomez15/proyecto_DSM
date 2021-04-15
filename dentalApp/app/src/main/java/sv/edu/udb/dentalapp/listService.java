@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class listOfAppointments extends AppCompatActivity {
+public class listService extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_of_appointments);
+        setContentView(R.layout.activity_list_service);
     }
 
     public void back(View view){
-        Intent intent = new Intent(listOfAppointments.this, dashboard.class);
+        Intent intent = new Intent(listService.this, dashboard.class);
         startActivity(intent);
     }
 }

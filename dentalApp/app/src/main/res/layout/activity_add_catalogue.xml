@@ -145,7 +145,8 @@
             android:text="@string/descriptionBtnBackCA"
             android:textColor="@color/white"
             app:cornerRadius="20dp"
-            tools:targetApi="lollipop" />
+            tools:targetApi="lollipop"
+            android:onClick="back"/>
 
     </LinearLayout>
 

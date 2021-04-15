@@ -71,6 +71,18 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
                 startActivity(intent);
                 finish();
                 break;
+            case R.id.nav_seeAppointments:
+                Intent intent2 = new Intent(dashboard.this, listOfAppointments.class);
+                startActivity(intent2);
+                break;
+            case R.id.nav_addServices:
+                Intent intent3 = new Intent(dashboard.this, addCatalogue.class);
+                startActivity(intent3);
+                break;
+            case R.id.nav_seeServices:
+                Intent intent4 = new Intent(dashboard.this, listService.class);
+                startActivity(intent4);
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

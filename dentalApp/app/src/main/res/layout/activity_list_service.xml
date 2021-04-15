@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".listOfAppointments">
+    tools:context=".listService">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:gravity="center"
             android:textColor="@color/azul_base_app"
             android:textSize="35sp"
-            android:text="@string/titleLA"/>
+            android:text="@string/titlSL"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -38,7 +38,7 @@
             android:textSize="18sp"
             android:textAllCaps="true"
             android:fontFamily="@font/telex"
-            android:text="@string/descriptionLA"/>
+            android:text="@string/descriptionSL"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -50,7 +50,7 @@
 
 
             <ListView
-                android:id="@+id/listAppointments"
+                android:id="@+id/listServices"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:descendantFocusability="blocksDescendants">
@@ -75,4 +75,5 @@
             android:onClick="back"/>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

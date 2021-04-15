@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -97,5 +98,10 @@ public class addAppointment extends AppCompatActivity {
         };
 
         new DatePickerDialog(addAppointment.this,dateSetListener,calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
+    }
+
+    public void back(View view){
+        Intent intent = new Intent(addAppointment.this, dashboard.class);
+        startActivity(intent);
     }
 }

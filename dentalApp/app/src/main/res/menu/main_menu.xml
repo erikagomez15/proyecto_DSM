@@ -40,7 +40,7 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/menu_seeServices"
+                    android:id="@+id/nav_seeServices"
                     android:icon="@drawable/ic_baseline_remove_white_eye_24"
                     android:title="@string/item8M" />
                 <item
