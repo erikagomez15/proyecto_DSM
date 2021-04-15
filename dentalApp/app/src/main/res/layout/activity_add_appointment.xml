@@ -6,4 +6,173 @@
     android:layout_height="match_parent"
     tools:context=".addAppointment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/telex"
+            android:gravity="center"
+            android:text="@string/titleSA"
+            android:textColor="@color/azul_base_app"
+            android:textSize="35sp"
+            app:drawableLeftCompat="@drawable/ic_baseline_add_24"
+            app:drawableStartCompat="@drawable/ic_baseline_add_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/telex"
+            android:hint="@string/userSA"
+            android:textColorHint="@color/azul_base_app"
+            app:boxStrokeColor="@color/azul_base_app"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/azul_base_app"
+            app:hintTextColor="@color/azul_base_app"
+            app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSelectTime_Date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/azul_base_app"
+                android:elevation="5dp"
+                android:fontFamily="@font/telex"
+                android:gravity="center"
+                android:text="@string/date_timeSA"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/hour_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/telex"
+                android:gravity="center"
+                android:text="8:30"
+                android:textColor="@color/someTextLogin"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/telex"
+            android:hint="@string/descriptionSA"
+            android:textColorHint="@color/azul_base_app"
+            app:boxStrokeColor="@color/azul_base_app"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/azul_base_app"
+            app:hintTextColor="@color/azul_base_app"
+            app:startIconDrawable="@drawable/ic_baseline_edit_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/observation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/selectServiceSA"
+            android:textAllCaps="true"
+            android:textColor="@color/someTextLogin"
+            android:textSize="18sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+
+            <ListView
+                android:id="@+id/listServices"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:descendantFocusability="blocksDescendants">
+
+            </ListView>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtvServiceRequired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/telex"
+            android:gravity="center"
+            android:text="Selección"
+            android:textColor="@color/azul_base_app"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnaddAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/azul_base_app"
+            android:elevation="5dp"
+            android:fontFamily="@font/telex"
+            android:gravity="center"
+            android:text="@string/buttonSA"
+            app:cornerRadius="20dp"
+            tools:targetApi="lollipop" />
+
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/azul_base_app"
+            android:elevation="5dp"
+            android:fontFamily="@font/telex"
+            android:gravity="center"
+            android:text="@string/cancel"
+            app:cornerRadius="20dp"
+            tools:targetApi="lollipop" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

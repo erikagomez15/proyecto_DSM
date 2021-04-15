@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">DentalApp</string>
+    <string name="cancel">Cancelar</string>
     <!-- Strings del splash-->
     <string name="slogan">Tu camino hacia una sonrisa brillante</string>
     <!-- String de Login-->
@@ -55,4 +56,13 @@
     <string name="item9M">Agregar servicios</string>
     <string name="navigation_drawer_open">Abrir Menu</string>
     <string name="navigation_drawer_close">Cerrar Menu</string>
+
+    <!-- Shedule Appointments -->
+    <string name="titleSA">Agendar Cita</string>
+    <string name="userSA">Usuario</string>
+    <string name="date_timeSA">Seleccione Hora y Fecha</string>
+    <string name="descriptionSA">Breve descripción</string>
+    <string name="selectServiceSA">Selecciona el servicio deseado</string>
+    <string name="buttonSA">Agregar cita</string>
+
 </resources>
