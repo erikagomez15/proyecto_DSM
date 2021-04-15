@@ -57,12 +57,13 @@
     <string name="navigation_drawer_open">Abrir Menu</string>
     <string name="navigation_drawer_close">Cerrar Menu</string>
 
-    <!-- Shedule Appointments -->
+    <!-- Shedule Appointments & Edit Appoinmets -->
     <string name="titleSA">Agendar Cita</string>
     <string name="userSA">Usuario</string>
     <string name="date_timeSA">Seleccione Hora y Fecha</string>
     <string name="descriptionSA">Breve descripción</string>
     <string name="selectServiceSA">Selecciona el servicio deseado</string>
     <string name="buttonSA">Agregar cita</string>
-
+    <string name="titleEA">Editar cita</string>
+    <string name="buttonEA">Editar</string>
 </resources>
