@@ -186,16 +186,16 @@
 
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/BtnGoogle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:backgroundTint="#cb2027"
             android:drawableLeft="@drawable/ic_icon_google"
+            android:fontFamily="@font/telex"
             android:text="@string/googleLogin"
             android:textColor="@color/white"
-            android:fontFamily="@font/telex"
-            android:backgroundTint="#cb2027"
-            app:cornerRadius="10dp"
-            />
+            app:cornerRadius="10dp" />
 
 
         </LinearLayout>
