@@ -195,6 +195,7 @@
             android:fontFamily="@font/telex"
             android:backgroundTint="#cb2027"
             app:cornerRadius="10dp"
+            android:id="@+id/BtnGoogle"
             />
 
 
