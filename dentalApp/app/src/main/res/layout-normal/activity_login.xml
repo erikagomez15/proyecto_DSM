@@ -66,11 +66,11 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
                 android:fontFamily="@font/telex"
-                />
+                android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,11 +86,11 @@
             app:boxStrokeWidthFocused="2dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
                 android:fontFamily="@font/telex"
-                />
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -111,16 +111,16 @@
             app:backgroundTint="@color/white" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Button"
-            app:cornerRadius="10dp"
-            app:strokeColor="@color/azul_base_app"
             android:backgroundTint="@color/azul_base_app"
-            android:text="@string/passLogin"
             android:fontFamily="@font/telex"
             android:onClick="Login"
-            />
+            android:text="@string/passLogin"
+            app:cornerRadius="10dp"
+            app:strokeColor="@color/azul_base_app" />
 
         <Button
             style="@style/Widget.MaterialComponents.Button.TextButton"

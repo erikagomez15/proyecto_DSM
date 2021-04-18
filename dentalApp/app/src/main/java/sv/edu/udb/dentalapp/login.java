@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
 import android.view.View;
@@ -12,8 +13,10 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import  android.content.Intent;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -28,7 +31,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class login extends AppCompatActivity {
-    private Button BtnLogin;
+    private Button BtnLogin,btnLogin;
+    private EditText edtUser, edtPassword;
     private GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
     int RC_SIGN_IN = 1;
@@ -42,6 +46,9 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
         BtnLogin= findViewById(R.id.BtnGoogle);
+        btnLogin=findViewById(R.id.btnLogin);
+        edtUser=findViewById(R.id.edtUser);
+        edtPassword=findViewById(R.id.edtPass);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -120,7 +127,44 @@ public class login extends AppCompatActivity {
 
     //************************************************************************+
 
+//LOGIN CON CORREO Y CONTRASEÑA
 
+    private void loginUserAccount() {
+
+        String email, password;
+        email = edtUser.getText().toString();
+        password = edtPassword.getText().toString();
+
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(getApplicationContext(), "Please enter password!", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "¡Login Exitoso!", Toast.LENGTH_LONG).show();
+
+
+                            Intent intent = new Intent(login.this, dashboard.class);
+                            startActivity(intent);
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "No se logró iniciar sesión. Intente más tarde", Toast.LENGTH_LONG).show();
+
+                        }
+                    }
+                });
+
+    }
+
+    //****************************************************************************************************++
 
 
 
@@ -140,10 +184,6 @@ public class login extends AppCompatActivity {
         finish();
     }
 
-    public void Login(View view){
-        //Aqui iria el codigo del Login
-        Intent intent = new Intent(login.this, dashboard.class);
-        startActivity(intent);
-    }
+
 
 }
