@@ -48,6 +48,8 @@ public class login extends AppCompatActivity {
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
+
+
         BtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

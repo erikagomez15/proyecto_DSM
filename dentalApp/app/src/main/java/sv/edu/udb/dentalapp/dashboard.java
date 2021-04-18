@@ -12,9 +12,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -22,11 +25,20 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    private FirebaseAuth mAuth;
+    private TextView NombreUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        NombreUsuario=findViewById(R.id.txtUsuario);
+
+        //FIrebase
+        mAuth=FirebaseAuth.getInstance();
+        FirebaseUser currentUser= mAuth.getCurrentUser();
+        NombreUsuario.setText(currentUser.getDisplayName());
 
         //Hooks
         drawerLayout = findViewById(R.id.drawer_layout);
