@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listOfAppointments">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_baseline_remove_blue_eye_35"
+            android:drawableLeft="@drawable/ic_baseline_remove_blue_eye_35"
+            android:fontFamily="@font/telex"
+            android:gravity="center"
+            android:textColor="@color/azul_base_app"
+            android:textSize="35sp"
+            android:text="@string/titleLA"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/someTextLogin"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/telex"
+            android:text="@string/descriptionLA"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:padding="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_marginTop="20dp">
+
+
+            <ListView
+                android:id="@+id/listAppointments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants">
+
+            </ListView>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/azul_base_app"
+            android:elevation="5dp"
+            android:fontFamily="@font/telex"
+            android:gravity="center"
+            android:text="@string/descriptionBtnBackCA"
+            app:cornerRadius="20dp"
+            tools:targetApi="lollipop"
+            android:onClick="back"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

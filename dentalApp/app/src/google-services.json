@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "889582844235",
+    "project_id": "dentalapp-710ed",
+    "storage_bucket": "dentalapp-710ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889582844235:android:f33e7a1d91fbe77b7d90ce",
+        "android_client_info": {
+          "package_name": "sv.edu.udb.dentalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889582844235-3db8t6co05a9rvo840fpi3ba6heucv75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.udb.dentalapp",
+            "certificate_hash": "d1bf7b64c79233fa2b0fecb50e37e2edce67080f"
+          }
+        },
+        {
+          "client_id": "889582844235-c9d9mm5rp5occ8oi1jchvvfem5rqt0ui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.udb.dentalapp",
+            "certificate_hash": "f0d92c1482f03d4bdce183b0c1f5254fa99acecb"
+          }
+        },
+        {
+          "client_id": "889582844235-i8g4siub1hb8241kj0ukvm946eofjegv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.udb.dentalapp",
+            "certificate_hash": "b9d5ba99400e789be947306c8fcff462833068f4"
+          }
+        },
+        {
+          "client_id": "889582844235-8h91icte2nqprkf4gthfbrvc091ogruq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGf5nuWc3YXrb1UQz4pSEnKzbF3qKZ5wU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889582844235-8h91icte2nqprkf4gthfbrvc091ogruq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
