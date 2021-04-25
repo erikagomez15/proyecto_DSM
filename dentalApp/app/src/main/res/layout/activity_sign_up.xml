@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signUp"
+    android:padding="20dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:transitionName="btnBack_transition"
+            android:onClick="toLogin"/>
+
+        <TextView
+            android:id="@+id/txtvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleCA"
+            android:textSize="40sp"
+            android:fontFamily="@font/telex"
+            android:textColor="@color/azul_base_app"
+            android:textAllCaps="true"
+            android:layout_marginTop="20dp"
+            android:transitionName="title_transition"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/someTextLogin"
+                android:textSize="18sp"
+                android:fontFamily="@font/telex"
+                android:textAllCaps="true"
+                android:text="@string/indicationsCA"
+                android:layout_marginBottom="20dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nameCA"
+                app:boxStrokeColor="@color/azul_base_app"
+                app:hintTextColor="@color/azul_base_app"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_baseline_edit_24"
+                android:textColorHint="@color/azul_base_app"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/azul_base_app"
+                app:boxStrokeWidthFocused="2dp"
+                android:fontFamily="@font/telex">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Registrername"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/surnameCA"
+                app:boxStrokeColor="@color/azul_base_app"
+                app:hintTextColor="@color/azul_base_app"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_baseline_edit_24"
+                android:textColorHint="@color/azul_base_app"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/azul_base_app"
+                app:boxStrokeWidthFocused="2dp"
+                android:fontFamily="@font/telex">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:id="@+id/Registrerlastname"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phoneNumberCA"
+                app:boxStrokeColor="@color/azul_base_app"
+                app:hintTextColor="@color/azul_base_app"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+                android:textColorHint="@color/azul_base_app"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/azul_base_app"
+                app:boxStrokeWidthFocused="2dp"
+                android:fontFamily="@font/telex">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"
+                    android:id="@+id/Registrerphone"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nextCA"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/azul_base_app"
+                app:cornerRadius="10dp"
+                android:layout_marginTop="20dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/telex"
+                android:transitionName="btnNext_transition"
+                android:onClick="nextScreen1"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loginCA"
+                android:textColor="#EAC130"
+                app:cornerRadius="10dp"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:fontFamily="@font/telex"
+                android:transitionName="btnLogin_transition"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

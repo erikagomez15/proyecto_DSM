@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">DentalApp</string>
+    <string name="cancel">Cancelar</string>
+    <!-- Strings del splash-->
+    <string name="slogan">Tu camino hacia una sonrisa brillante</string>
+    <!-- String de Login-->
+    <string name="wellcomeLogin">¡Bienvenido de nuevo!</string>
+    <string name="signIn">Inicia sesión para continuar</string>
+    <string name="userLogin">Usuario</string>
+    <string name="passwordLogin">Contraseña</string>
+    <string name="forgetPassword"><b><u>¿Olvidó su contraseña? De click aquí</u></b></string>
+    <string name="passLogin">Iniciar sesión</string>
+    <string name="signUpLogin"><b><u>¿Sin cuenta? Registrate aquí</u></b></string>
+    <string name="orLogin">O inicia con</string>
+    <string name="googleLogin">Iniciar sesión con Google</string>
+    <string name="logoDescription">Logo de la app</string>
+    <!--Forget password-->
+    <string name="tittleFP">Recuperar contraseña</string>
+    <string name="emailFP">Correo electronico</string>
+    <string name="indicationsFP">INTRODUZCA EL CORREO ELECTRONICO DE LA CUENTA QUE DESEA RECUPERAR</string>
+    <string name="sendMailFP">Enviar correo</string>
+    <string name="descriptionIMGFP">Imagen de candado</string>
+    <!-- Create account-->
+    <string name="titleCA">Crea tu cuenta</string>
+    <string name="nameCA">Nombres</string>
+    <string name="surnameCA">Apellidos</string>
+    <string name="userCA">Nombre de usuario</string>
+    <string name="mailCA">Correo Electrónico</string>
+    <string name="phoneNumberCA">Número de Teléfono</string>
+    <string name="passwordCA">Contraseña</string>
+    <string name="confirmPasswordCA">Confirma contraseña</string>
+    <string name="nextCA">Sguiente</string>
+    <string name="loginCA"><b><u>¿Ya tienes cuenta? Inicia sesión</u></b></string>
+    <string name="genderCA">Selecciona tu Genero</string>
+    <string name="gender1CA">Masculino</string>
+    <string name="gender2CA">Femenino</string>
+    <string name="gender3CA">Queer</string>
+    <string name="birthCA">Selecciona tu fecha de nacimiento</string>
+    <string name="createCA">Crear cuenta</string>
+    <string name="indicationsCA">Ingresa los datos requeridos</string>
+    <string name="descriptionBtnBackCA">Regresar</string>
+    <!--Menu -->
+    <string name="item1M">Configuraciones</string>
+    <string name="item2M">Ver citas proximas</string>
+    <string name="item3M">Agendar cita</string>
+    <string name="item4M">Catalogo de servicios</string>
+    <string name="item5M">Expedientes</string>
+    <string name="item6M">Ayuda</string>
+    <string name="item7M">Reporte de citas</string>
+    <string name="openM">Abrir</string>
+    <string name="closeM">Cerrar</string>
+    <string name="home">Inicio</string>
+    <string name="titleDatesM">Citas</string>
+    <string name="titleCataloueM">Catalogo</string>
+    <string name="item8M">Ver servicios</string>
+    <string name="item9M">Agregar servicios</string>
+    <string name="navigation_drawer_open">Abrir Menu</string>
+    <string name="navigation_drawer_close">Cerrar Menu</string>
+
+    <!-- Shedule Appointments & Edit Appoinmets -->
+    <string name="titleSA">Agendar Cita</string>
+    <string name="userSA">Usuario</string>
+    <string name="date_timeSA">Seleccione Hora y Fecha</string>
+    <string name="descriptionSA">Breve descripción</string>
+    <string name="selectServiceSA">Selecciona el servicio deseado</string>
+    <string name="buttonSA">Agregar cita</string>
+    <string name="titleEA">Editar cita</string>
+    <string name="buttonEA">Editar</string>
+
+    <!-- List of appoinments -->
+    <string name="titleLA">Lista de Citas</string>
+    <string name="descriptionLA">Proximas citas</string>
+
+    <!--  Add catalogue -->
+    <string name="titleAC">Añadir a Catalogo</string>
+    <string name="nameServiceAC">Nombre del proceso</string>
+    <string name="descriptionAC">Agregar breve descripción</string>
+    <string name="priceAC">Precio del proceso</string>
+    <string name="timeAC">Tiempo(minutos) del proceso</string>
+    <string name="buttonAC">Agregar Servicio</string>
+
+    <!-- Services' List -->
+    <string name="titlSL">Catalogo de servicios</string>
+    <string name="descriptionSL">Servicios que ofrecemos</string>
+</resources>

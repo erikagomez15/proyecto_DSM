@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sign_up3"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:transitionName="btnBack_transition"
+            android:contentDescription="TODO"
+            android:onClick="toSignUp2"/>
+
+        <TextView
+            android:id="@+id/txtvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleCA"
+            android:textSize="40sp"
+            android:fontFamily="@font/telex"
+            android:textColor="@color/azul_base_app"
+            android:textAllCaps="true"
+            android:layout_marginTop="20dp"
+            android:transitionName="title_transition"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/genderCA"
+                android:textColor="@color/someTextLogin"
+                android:textSize="18sp"/>
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/rbtnMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender1CA"
+                    style="@style/radioButtons"
+                    android:textColor="@color/someTextLogin"
+                    android:layout_margin="5dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender2CA"
+                    style="@style/radioButtons"
+                    android:textColor="@color/someTextLogin"
+                    android:layout_margin="5dp"/>
+
+
+            </RadioGroup>
+
+            <TextView
+                style="@style/Divider"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/birthCA"
+                android:textColor="@color/someTextLogin"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
+
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:spinnersShown="true"
+                android:id="@+id/DPfecha"/>
+
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/createCA"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/azul_base_app"
+                app:cornerRadius="10dp"
+                android:layout_marginTop="20dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/telex"
+                android:transitionName="btnNext_transition"
+                android:onClick="createUserAccount"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
