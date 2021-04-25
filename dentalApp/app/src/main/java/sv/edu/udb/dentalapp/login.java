@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import  android.content.Intent;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -34,6 +35,7 @@ public class login extends AppCompatActivity {
     private Button BtnLogin,btnLogin;
     private EditText edtUser, edtPassword;
     private GoogleSignInClient mGoogleSignInClient;
+    private TextView recuperacion;
     private FirebaseAuth mAuth;
     int RC_SIGN_IN = 1;
     String TAG = "GoogleSignIn";
@@ -49,6 +51,8 @@ public class login extends AppCompatActivity {
         btnLogin=findViewById(R.id.btnLogin);
         edtUser=findViewById(R.id.edtUser);
         edtPassword=findViewById(R.id.edtPass);
+        recuperacion =findViewById(R.id.recuperarcontra);
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -63,7 +67,25 @@ public class login extends AppCompatActivity {
                 signIn();
             }
         });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginUserAccount();
+            }
+        });
+        recuperacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(login.this, forgetPassword.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
     }
+
+
 
 
     //LOGIN GOOGLE

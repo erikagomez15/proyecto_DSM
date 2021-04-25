@@ -40,7 +40,8 @@
             android:fontFamily="@font/telex"
             android:text="@string/descriptionLA"/>
 
-        <androidx.cardview.widget.CardView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listAppointments"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:padding="20dp"
@@ -48,16 +49,7 @@
             app:cardElevation="10dp"
             android:layout_marginTop="20dp">
 
-
-            <ListView
-                android:id="@+id/listAppointments"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:descendantFocusability="blocksDescendants">
-
-            </ListView>
-
-        </androidx.cardview.widget.CardView>
+        </androidx.recyclerview.widget.RecyclerView>
 
         <Button
             android:id="@+id/btnback"

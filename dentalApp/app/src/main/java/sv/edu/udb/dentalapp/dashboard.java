@@ -67,6 +67,12 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
         }
 
     }
+    public void SignOut(){
+        mAuth.signOut();
+        Intent intent = new Intent(getApplicationContext(), login.class);
+        startActivity(intent);
+        finish();
+    }
 
     //go to other acts
     @Override
@@ -94,6 +100,9 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
             case R.id.nav_seeServices:
                 Intent intent4 = new Intent(dashboard.this, listService.class);
                 startActivity(intent4);
+                break;
+            case R.id.navSesion:
+                SignOut();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

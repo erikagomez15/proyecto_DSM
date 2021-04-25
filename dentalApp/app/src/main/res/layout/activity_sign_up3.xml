@@ -58,7 +58,7 @@
                 android:layout_marginTop="10dp">
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/rbtnMale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/gender1CA"
@@ -67,7 +67,7 @@
                     android:layout_margin="5dp"/>
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/rbtnFemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/gender2CA"
@@ -75,14 +75,7 @@
                     android:textColor="@color/someTextLogin"
                     android:layout_margin="5dp"/>
 
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/gender3CA"
-                    style="@style/radioButtons"
-                    android:textColor="@color/someTextLogin"
-                    android:layout_margin="5dp"/>
+
             </RadioGroup>
 
             <TextView
@@ -104,7 +97,8 @@
                 android:layout_height="wrap_content"
                 android:datePickerMode="spinner"
                 android:calendarViewShown="false"
-                android:spinnersShown="true"/>
+                android:spinnersShown="true"
+                android:id="@+id/DPfecha"/>
 
 
             <Button

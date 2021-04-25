@@ -17,6 +17,7 @@ public class signUp extends AppCompatActivity {
     private ImageView imvback;
     private TextView txtvTitle;
     private Button btnNext, btnLogin;
+    private EditText edtname, edtlastname,edtphone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +28,19 @@ public class signUp extends AppCompatActivity {
         txtvTitle = findViewById(R.id.txtvTitle);
         btnLogin = findViewById(R.id.btnLogin);
         btnNext = findViewById(R.id.btnNext);
+        edtname = findViewById(R.id.Registrername);
+        edtlastname = findViewById(R.id.Registrerlastname);
+        edtphone = findViewById(R.id.Registrerphone);
     }
 
     //To make the transition to sign_up2 activity
     public void nextScreen1(View view){
         Intent intent = new Intent(getApplicationContext(), sign_up2.class);
+
+        intent.putExtra("name",edtname.getText().toString());
+        intent.putExtra("lastname",edtlastname.getText().toString());
+        intent.putExtra("phone",edtphone.getText().toString());
+
         Pair[] pairs = new Pair[3];
         pairs[0] = new Pair<View, String>(imvback, "btnBack_transition");
         pairs[1] = new Pair<View, String>(txtvTitle, "title_transition");

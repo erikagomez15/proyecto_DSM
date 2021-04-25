@@ -70,7 +70,8 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:id="@+id/Registrername"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,7 +92,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:id="@+id/Registrerlastname"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,7 +116,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="phone"/>
+                    android:inputType="phone"
+                    android:id="@+id/Registrerphone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
