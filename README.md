@@ -4,11 +4,16 @@ Dental App es una aplicación móvil para sistema operativo Android a partir de 
 
 INTEGRANTES DEL EQUIPO DE DESARROLLO  DEL PROYECTO
 
-Fuentes Ramírez, Kevin José FR170484  01T      
+Fuentes Ramírez, Kevin José FR170484  01T  
+
 Guzmán García, Johana Elizabeth GG170441 01T 
+
 Herrera Molina, Rosa Estela HM170237 03T 
+
 Gómez López, Erika Lissette GL151366 01T 
+
 Pérez Valencia, Josselyn del Carmen PV150955 01T 
+
 Jacob Ortiz, Josué Benjamín JO160375 02T
 
 
