@@ -82,4 +82,8 @@
     <!-- Services' List -->
     <string name="titlSL">Catalogo de servicios</string>
     <string name="descriptionSL">Servicios que ofrecemos</string>
+
+    <!-- Dashboard -->
+    <string name="buttonTitle">Crear cita</string>
+    <string name="someAppoinmentsD">Citas proximas</string>
 </resources>
