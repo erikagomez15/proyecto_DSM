@@ -62,9 +62,16 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     }
 
+    //method to open BottomSheet
     public void openBottomSheet(View view){
         BottomSheet bottomSheet = new BottomSheet();
         bottomSheet.show(getSupportFragmentManager(), "TAG");
+    }
+
+    //To add appoinment
+    public void goAddApoinment(View view){
+        Intent intent = new Intent(dashboard.this, addAppointment.class);
+        startActivity(intent);
     }
 
     @Override

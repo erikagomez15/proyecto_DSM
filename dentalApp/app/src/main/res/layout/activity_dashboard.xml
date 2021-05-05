@@ -43,7 +43,8 @@
             android:drawableLeft="@drawable/ic_baseline_add_white_24"
             android:textSize="10sp"
             android:layout_marginRight="20dp"
-            android:layout_marginEnd="20dp" />
+            android:layout_marginEnd="20dp"
+            android:onClick="goAddApoinment"/>
 
         <TextView
             android:layout_width="match_parent"
