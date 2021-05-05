@@ -16,12 +16,20 @@ import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.QuickContactBadge;
+
 public class dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Menu Variables
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+
+    //Sheet's buttons variables
+    ImageButton sheetButton;
+    private int widget_appCompat_imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +40,7 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+       sheetButton = findViewById(R.id.sheetBottom1);
 
         //Toolbar
         setSupportActionBar(toolbar);
@@ -44,6 +53,13 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_hom);
+
+
+    }
+
+    public void openBottomSheet(View view){
+        BottomSheet bottomSheet = new BottomSheet();
+        bottomSheet.show(getSupportFragmentManager(), "TAG");
     }
 
     @Override

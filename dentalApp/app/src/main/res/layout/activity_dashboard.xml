@@ -42,7 +42,8 @@
             tools:targetApi="lollipop"
             android:drawableLeft="@drawable/ic_baseline_add_white_24"
             android:textSize="10sp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -103,13 +104,15 @@
                                     android:textSize="18sp" />
 
                                 <ImageButton
+                                    android:id="@+id/sheetBottom1"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:layout_weight="1"
                                     android:backgroundTint="@color/white"
                                     android:gravity="right"
-                                    android:src="@drawable/ic_baseline_more_vert_24" />
+                                    android:src="@drawable/ic_baseline_more_vert_24"
+                                    android:onClick="openBottomSheet"/>
 
                             </LinearLayout>
 
@@ -211,7 +214,8 @@
                                 android:justificationMode="inter_word"
                                 android:text="adsjflakdsjflakjsdfajdsfjadsfjkadsf{adflakdsfladfasdhfoahsd"
                                 android:textColor="@color/someTextLogin"
-                                android:textSize="13sp" />
+                                android:textSize="13sp"
+                                tools:targetApi="o" />
 
                         </LinearLayout>
 

@@ -86,4 +86,8 @@
     <!-- Dashboard -->
     <string name="buttonTitle">Crear cita</string>
     <string name="someAppoinmentsD">Citas proximas</string>
+
+    <!-- SheetBottom -->
+    <string name="deleteSB">Eliminar</string>
+    <string name="updateSB">Modificar</string>
 </resources>
