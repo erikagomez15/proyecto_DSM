@@ -178,13 +178,15 @@
                                     android:textSize="18sp" />
 
                                 <ImageButton
+                                    android:id="@+id/sheetButton2"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:layout_weight="1"
                                     android:backgroundTint="@color/white"
                                     android:gravity="right"
-                                    android:src="@drawable/ic_baseline_more_vert_24" />
+                                    android:src="@drawable/ic_baseline_more_vert_24"
+                                    android:onClick="openBottomSheet"/>
 
                             </LinearLayout>
 
@@ -257,13 +259,15 @@
                                     android:textSize="18sp" />
 
                                 <ImageButton
+                                    android:id="@+id/sheetButton3"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:layout_weight="1"
                                     android:backgroundTint="@color/white"
                                     android:gravity="right"
-                                    android:src="@drawable/ic_baseline_more_vert_24" />
+                                    android:src="@drawable/ic_baseline_more_vert_24"
+                                    android:onClick="openBottomSheet"/>
 
                             </LinearLayout>
 
@@ -329,13 +333,15 @@
                                     android:textSize="18sp" />
 
                                 <ImageButton
+                                    android:id="@+id/sheetButton4"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:layout_weight="1"
                                     android:backgroundTint="@color/white"
                                     android:gravity="right"
-                                    android:src="@drawable/ic_baseline_more_vert_24" />
+                                    android:src="@drawable/ic_baseline_more_vert_24"
+                                    android:onClick="openBottomSheet"/>
 
                             </LinearLayout>
 
@@ -408,13 +414,15 @@
                                     android:textSize="18sp" />
 
                                 <ImageButton
+                                    android:id="@+id/sheetButton5"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:layout_weight="1"
                                     android:backgroundTint="@color/white"
                                     android:gravity="right"
-                                    android:src="@drawable/ic_baseline_more_vert_24" />
+                                    android:src="@drawable/ic_baseline_more_vert_24"
+                                    android:onClick="openBottomSheet"/>
 
                             </LinearLayout>
 
@@ -480,13 +488,15 @@
                                     android:textSize="18sp" />
 
                                 <ImageButton
+                                    android:id="@+id/sheetButton6"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:layout_weight="1"
                                     android:backgroundTint="@color/white"
                                     android:gravity="right"
-                                    android:src="@drawable/ic_baseline_more_vert_24" />
+                                    android:src="@drawable/ic_baseline_more_vert_24"
+                                    android:onClick="openBottomSheet"/>
 
                             </LinearLayout>
 

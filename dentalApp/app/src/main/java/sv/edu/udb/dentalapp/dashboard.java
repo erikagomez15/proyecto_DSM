@@ -28,7 +28,7 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
     Toolbar toolbar;
 
     //Sheet's buttons variables
-    ImageButton sheetButton;
+    ImageButton sheetButton, sheetButton2, sheetButton3, sheetButton4, sheetButton5, sheetButton6;
     private int widget_appCompat_imageButton;
 
     @Override
@@ -40,7 +40,12 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
-       sheetButton = findViewById(R.id.sheetBottom1);
+        sheetButton = findViewById(R.id.sheetBottom1);
+        sheetButton2 = findViewById(R.id.sheetButton2);
+        sheetButton3 = findViewById(R.id.sheetButton3);
+        sheetButton4 = findViewById(R.id.sheetButton4);
+        sheetButton5 = findViewById(R.id.sheetButton5);
+        sheetButton6 = findViewById(R.id.sheetButton6);
 
         //Toolbar
         setSupportActionBar(toolbar);
