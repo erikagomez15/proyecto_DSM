@@ -60,7 +60,7 @@ public class addAppointment extends AppCompatActivity {
         setContentView(R.layout.activity_add_appointment);
         //hooks
         btnBackDash = findViewById(R.id.btnBackDash);
-        listView= findViewById(R.id.listServices);
+        //listView= findViewById(R.id.listServices);
         txtvServiceRequired = findViewById(R.id.txtvServiceRequired);
         hour_date = findViewById(R.id.hour_date);
         btnSelectTime_Date = findViewById(R.id.btnSelectTime_Date);
