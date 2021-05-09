@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -43,8 +44,9 @@ public class addAppointment extends AppCompatActivity {
     ArrayList<Service> listServices;
     RecyclerView recycler;
     AdapterService adapter;
-private Service servicio;
+    private Service servicio;
     TextView txtvServiceRequired;
+    ImageButton btnBackDash;
     //date & time picker's variables
     TextView hour_date;
     Button btnSelectTime_Date , btnAddAppointment;
@@ -57,8 +59,8 @@ private Service servicio;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_appointment);
         //hooks
-        recycler = findViewById(R.id.listServicesAppointment);
-
+        btnBackDash = findViewById(R.id.btnBackDash);
+        listView= findViewById(R.id.listServices);
         txtvServiceRequired = findViewById(R.id.txtvServiceRequired);
         hour_date = findViewById(R.id.hour_date);
         btnSelectTime_Date = findViewById(R.id.btnSelectTime_Date);

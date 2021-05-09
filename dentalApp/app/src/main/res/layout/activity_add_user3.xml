@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".sign_up3"
+    tools:context=".addUser3"
     android:padding="20dp">
 
     <LinearLayout
@@ -21,7 +21,7 @@
             android:src="@drawable/ic_baseline_arrow_back_24"
             android:transitionName="btnBack_transition"
             android:contentDescription="TODO"
-            android:onClick="toSignUp2"/>
+            android:onClick="backAddUser2"/>
 
         <TextView
             android:id="@+id/txtvTitle"
@@ -58,7 +58,7 @@
                 android:layout_marginTop="10dp">
 
                 <RadioButton
-                    android:id="@+id/rbtnMale"
+                    android:id="@+id/radioButton3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/gender1CA"
@@ -67,7 +67,7 @@
                     android:layout_margin="5dp"/>
 
                 <RadioButton
-                    android:id="@+id/rbtnFemale"
+                    android:id="@+id/radioButton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/gender2CA"
@@ -75,9 +75,47 @@
                     android:textColor="@color/someTextLogin"
                     android:layout_margin="5dp"/>
 
-
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender3CA"
+                    style="@style/radioButtons"
+                    android:textColor="@color/someTextLogin"
+                    android:layout_margin="5dp"/>
             </RadioGroup>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/someTextLogin"
+                android:text="@string/typeUserAU"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/rdbType1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/typeUser1AU"
+                    style="@style/radioButtons"
+                    android:textColor="@color/someTextLogin"
+                    android:layout_margin="5dp"/>
+
+                <RadioButton
+                    android:id="@+id/rdbType2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/typeUser2AU"
+                    style="@style/radioButtons"
+                    android:textColor="@color/someTextLogin"
+                    android:layout_margin="5dp"/>
+            </RadioGroup>
 
             <TextView
                 style="@style/Divider"
@@ -95,11 +133,10 @@
 
             <DatePicker
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="140dp"
                 android:datePickerMode="spinner"
                 android:calendarViewShown="false"
-                android:spinnersShown="true"
-                android:id="@+id/DPfecha"/>
+                android:spinnersShown="true"/>
 
 
             <Button
