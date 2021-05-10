@@ -78,8 +78,9 @@
                 android:layout_margin="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Usuname"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,9 +101,10 @@
                 android:layout_margin="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Usulastname"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"/>
+                    android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,9 +127,10 @@
             android:layout_margin="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Usuemail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -159,15 +162,16 @@
                     android:layout_marginTop="5dp"/>
 
                 <TextView
+                    android:id="@+id/Usuage"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="18"
                     android:textColor="@color/someTextLogin"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    android:layout_marginTop="5dp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -188,9 +192,10 @@
                 android:layout_margin="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Usunumber"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"/>
+                    android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
