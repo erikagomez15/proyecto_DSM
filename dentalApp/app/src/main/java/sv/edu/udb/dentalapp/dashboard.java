@@ -19,6 +19,10 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.QuickContactBadge;
+
 public class dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Menu Variables
@@ -27,6 +31,10 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
     Toolbar toolbar;
     private FirebaseAuth mAuth;
     private TextView NombreUsuario;
+
+    //Sheet's buttons variables
+    ImageButton sheetButton, sheetButton2, sheetButton3, sheetButton4, sheetButton5, sheetButton6;
+    private int widget_appCompat_imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +52,12 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        sheetButton = findViewById(R.id.sheetBottom1);
+        sheetButton2 = findViewById(R.id.sheetButton2);
+        sheetButton3 = findViewById(R.id.sheetButton3);
+        sheetButton4 = findViewById(R.id.sheetButton4);
+        sheetButton5 = findViewById(R.id.sheetButton5);
+        sheetButton6 = findViewById(R.id.sheetButton6);
 
         //Toolbar
         setSupportActionBar(toolbar);
@@ -56,6 +70,20 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_hom);
+
+
+    }
+
+    //method to open BottomSheet
+    public void openBottomSheet(View view){
+        BottomSheet bottomSheet = new BottomSheet();
+        bottomSheet.show(getSupportFragmentManager(), "TAG");
+    }
+
+    //To add appoinment
+    public void goAddApoinment(View view){
+        Intent intent = new Intent(dashboard.this, addAppointment.class);
+        startActivity(intent);
     }
 
     @Override

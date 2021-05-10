@@ -82,4 +82,34 @@
     <!-- Services' List -->
     <string name="titlSL">Catalogo de servicios</string>
     <string name="descriptionSL">Servicios que ofrecemos</string>
+
+    <!-- Dashboard -->
+    <string name="buttonTitle">Crear cita</string>
+    <string name="someAppoinmentsD">Citas proximas</string>
+
+    <!-- SheetBottom -->
+    <string name="deleteSB">Eliminar</string>
+    <string name="updateSB">Modificar</string>
+
+    <!-- Add User -->
+    <string name="titleAU">Crear usuario</string>
+    <string name="backDescriptionAU">Regresar a Pantalla princiapl</string>
+    <string name="genreUserAU">Genero de usuario</string>
+    <string name="birthUserAU">Fecha de nacimiento</string>
+    <string name="typeUserAU">Tipo de Usuario</string>
+    <string name="typeUser1AU">Dentista</string>
+    <string name="typeUser2AU">Cliente</string>
+    <string name="passwordAU">Contraseña temporal</string>
+    <string name="password2AU">Confirmar contraseña temporal</string>
+
+    <!-- Profile -->
+    <string name="titleP">Perfil Usuario</string>
+    <string name="descriptionPicP">Foto de usuario</string>
+    <string name="namesP">Nombres</string>
+    <string name="surenameP">Apellidos</string>
+    <string name="ageP">Edad : </string>
+    <string name="celphoneNumberP">Numero celular</string>
+    <string name="genreP">Genero</string>
+    <string name="cellphoneNumberP"># celular</string>
+    <string name="btnTitleP">Guardar cambios</string>
 </resources>
