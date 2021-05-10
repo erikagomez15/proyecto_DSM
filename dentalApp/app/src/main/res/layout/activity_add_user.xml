@@ -73,8 +73,9 @@
                 android:layout_margin="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Username"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,33 +95,34 @@
                 android:layout_margin="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Userlstname"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"/>
+                    android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
 
-
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Usernumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/telex"
                 android:hint="@string/phoneNumberCA"
-                app:boxStrokeColor="@color/azul_base_app"
-                app:hintTextColor="@color/azul_base_app"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
                 android:textColorHint="@color/azul_base_app"
+                app:boxStrokeColor="@color/azul_base_app"
+                app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/azul_base_app"
-                app:boxStrokeWidthFocused="2dp"
-                android:fontFamily="@font/telex"
-                android:layout_margin="10dp">
+                app:hintTextColor="@color/azul_base_app"
+                app:startIconDrawable="@drawable/ic_baseline_local_phone_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="phone"/>
+                    android:inputType="phone" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
