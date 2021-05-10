@@ -192,9 +192,10 @@
                 android:layout_margin="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Usunumber"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"/>
+                    android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
