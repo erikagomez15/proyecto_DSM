@@ -1,6 +1,9 @@
 package sv.edu.udb.dentalapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -8,63 +11,111 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.UUID;
+import sv.edu.udb.dentalapp.Adapters.AdapterService;
+import sv.edu.udb.dentalapp.Models.Appointment;
+import sv.edu.udb.dentalapp.Models.Service;
 
 public class addAppointment extends AppCompatActivity {
 
-    private ListView listView;
-    private ArrayList<String> services;
-    TextView txtvServiceRequired;
     ImageButton btnBackDash;
+    ArrayList<Service> listServices;
+    RecyclerView recycler;
+    AdapterService adapter;
+    private Service servicio;
+    TextView txtvServiceRequired, typeuser, User;
     //date & time picker's variables
     TextView hour_date;
-    Button btnSelectTime_Date;
+    Button btnSelectTime_Date, btnAddAppointment;
+    EditText edtUser,edtDescription;
+    com.google.android.material.textfield.TextInputLayout mask;
+    private String tipoUsuario;
+    private String usuario;
+
+    public static FirebaseDatabase database = FirebaseDatabase.getInstance();
+    public static DatabaseReference refAppointments = database.getReference("Appointments");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_appointment);
+
+        Bundle bundle = getIntent().getExtras();
+        tipoUsuario = bundle.getString("type");
+        usuario = bundle.getString("user");
+
+
+        
         //hooks
+
         btnBackDash = findViewById(R.id.btnBackDash);
-        listView= findViewById(R.id.listServices);
+
+        recycler = findViewById(R.id.listServicesAppointment);
+        typeuser = (TextView) findViewById(R.id.txtTypeUser);
+        User = (TextView) findViewById(R.id.txtUserA);
+        mask = findViewById(R.id.maskUser);
+        typeuser.setText(tipoUsuario);
+        User.setText(usuario);
+
         txtvServiceRequired = findViewById(R.id.txtvServiceRequired);
         hour_date = findViewById(R.id.hour_date);
         btnSelectTime_Date = findViewById(R.id.btnSelectTime_Date);
-
+        btnAddAppointment = findViewById(R.id.btnaddAppointment);
         hour_date.setInputType(InputType.TYPE_NULL);
+        edtUser = findViewById(R.id.user);
+        edtDescription = findViewById(R.id.observation);
 
-        //Aqui se obtendrian los servicios del catalogo
-        services = new ArrayList<String>();
-        services.add("Servicio 1");
-        services.add("Servicio 2");
-        services.add("Servicio 3");
-        services.add("Servicio 4");
-        services.add("Servicio 5");
+        if(tipoUsuario.equals("cliente"))
+        {   edtUser.setVisibility(View.INVISIBLE);
+            mask.setHint(usuario);
+        }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_activated_1,services);
-        listView.setAdapter(adapter);
 
-        //Get item selected
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        listServices = new ArrayList<Service>();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        adapter = new AdapterService(listServices);
+        adapter.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                txtvServiceRequired.setText(services.get(position));
+            public void onClick(View v) {
+                txtvServiceRequired.setText(listServices.get(recycler.getChildAdapterPosition(v)).getName());
             }
         });
+        recycler.setAdapter(adapter);
+        database.getReference("Services").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+                listServices.removeAll(listServices);
+                for(DataSnapshot snapshot : datasnapshot.getChildren()){
+                    Service s = snapshot.getValue(Service.class);
+                    listServices.add(s);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        hour_date.setInputType(InputType.TYPE_NULL);
 
         btnSelectTime_Date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +156,30 @@ public class addAppointment extends AppCompatActivity {
 
     public void back(View view){
         Intent intent = new Intent(addAppointment.this, dashboard.class);
+        intent.putExtra("type",tipoUsuario);
+        intent.putExtra("user",usuario);
         startActivity(intent);
+    }
+
+    public void AddAppointment(View view){
+        String Usuario="";
+        if(tipoUsuario.equals("cliente")){Usuario = usuario;}
+        else{
+            Usuario = edtUser.getText().toString();
+        }
+
+        String descripcion = edtDescription.getText().toString();
+        String key = UUID.randomUUID().toString();
+        Appointment A = new Appointment(Usuario,descripcion,hour_date.getText().toString(),txtvServiceRequired.getText().toString(), key);
+        refAppointments.child(key).setValue(A);
+        Toast.makeText(getApplicationContext(),"Cita Realizada",Toast.LENGTH_LONG).show();
+        CleanInputs();
+    }
+
+    public void CleanInputs(){
+        txtvServiceRequired.setText("Selección");
+        hour_date.setText("");
+        edtDescription.setText("");
+        edtUser.setText("");
     }
 }

@@ -5,15 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".addUser2"
-    android:padding="20dp"
-    >
+    android:padding="20dp">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/btnBack"
@@ -76,10 +74,10 @@
                 android:layout_margin="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Usercorreo"
+                    android:id="@+id/txtAddUserEmail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,9 +98,9 @@
                 android:layout_margin="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Userpsswd"
+                    android:id="@+id/txtAddUserPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,9 +111,8 @@
                 app:boxStrokeColor="@color/azul_base_app"
                 app:hintTextColor="@color/azul_base_app"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:startIconDrawable="@drawable/ic_baseline_lock_open_24"
+                app:startIconDrawable="@drawable/ic_baseline_person_24"
                 android:textColorHint="@color/azul_base_app"
-                app:passwordToggleEnabled="true"
                 app:endIconTint="@color/azul_base_app"
                 app:passwordToggleTint="@color/someTextLogin"
                 app:boxStrokeWidthFocused="2dp"
@@ -123,9 +120,9 @@
                 android:layout_margin="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Userpsswdc"
+                    android:id="@+id/txtAddUserUsuario"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 

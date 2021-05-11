@@ -58,7 +58,7 @@
                 android:layout_marginTop="10dp">
 
                 <RadioButton
-                    android:id="@+id/rbtnMaleU"
+                    android:id="@+id/rbtnAddUserMale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/gender1CA"
@@ -67,7 +67,7 @@
                     android:layout_margin="5dp"/>
 
                 <RadioButton
-                    android:id="@+id/rbtnFemaleU"
+                    android:id="@+id/rbtnAddUserFemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/gender2CA"
@@ -99,7 +99,7 @@
                 android:layout_marginTop="10dp">
 
                 <RadioButton
-                    android:id="@+id/rdbTypedentist"
+                    android:id="@+id/rdbTypeAdmin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/typeUser1AU"
@@ -108,7 +108,7 @@
                     android:layout_margin="5dp"/>
 
                 <RadioButton
-                    android:id="@+id/rdbTypeCustomer"
+                    android:id="@+id/rdbTypeClient"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/typeUser2AU"
@@ -132,12 +132,12 @@
                 android:layout_marginTop="10dp"/>
 
             <DatePicker
-                android:id="@+id/DPfechaU"
+                android:id="@+id/fechaAddUser"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
-                android:calendarViewShown="false"
                 android:datePickerMode="spinner"
-                android:spinnersShown="true" />
+                android:calendarViewShown="false"
+                android:spinnersShown="true"/>
 
 
             <Button

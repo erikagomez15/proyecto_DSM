@@ -1,6 +1,7 @@
 package sv.edu.udb.dentalapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
@@ -29,7 +30,19 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+
+import sv.edu.udb.dentalapp.Models.Service;
+import sv.edu.udb.dentalapp.Models.User;
 
 public class login extends AppCompatActivity {
     private Button BtnLogin,btnLogin;
@@ -39,6 +52,8 @@ public class login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     int RC_SIGN_IN = 1;
     String TAG = "GoogleSignIn";
+    private FirebaseDatabase database;
+
 
 
     @Override
@@ -129,8 +144,12 @@ public class login extends AppCompatActivity {
 
 
                             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-
+                                mAuth=FirebaseAuth.getInstance();
+                                FirebaseUser currentUser= mAuth.getCurrentUser();
+                                String usuario = currentUser.getEmail();
                                 Intent dashboardActivity = new Intent(login.this,dashboard.class);
+                                dashboardActivity.putExtra("type","cliente");
+                                dashboardActivity.putExtra("user",usuario);
                                 startActivity(dashboardActivity);
                                 login.this.finish();
 
@@ -173,9 +192,8 @@ public class login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "¡Login Exitoso!", Toast.LENGTH_LONG).show();
 
+                            VerificarTipo(email);
 
-                            Intent intent = new Intent(login.this, dashboard.class);
-                            startActivity(intent);
                         }
                         else {
                             Toast.makeText(getApplicationContext(), "No se logró iniciar sesión. Intente más tarde", Toast.LENGTH_LONG).show();
@@ -183,9 +201,45 @@ public class login extends AppCompatActivity {
                         }
                     }
                 });
-
     }
 
+    public void VerificarTipo(String email){
+
+
+        database = FirebaseDatabase.getInstance();
+        Query query = database.getReference("Usuarios").orderByChild("email").equalTo(email);
+        query.addValueEventListener(new ValueEventListener() {
+            int count = 0;
+            String TipoUsuario ="";
+            String correo ="";
+            @Override
+            public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+
+                    for(DataSnapshot snapshot: datasnapshot.getChildren()){
+                        User u = snapshot.getValue(User.class);
+                        TipoUsuario = u.getType();
+                        correo = u.getEmail();
+                        count++;
+                    }
+                Toast.makeText(getApplicationContext(),"Encontramos " + count + " Registros",Toast.LENGTH_LONG).show();
+                //if(count>0){ TipoUsuario = "cliente";}
+                //else {TipoUsuario = "admin";}
+                Intent intent = new Intent(login.this, dashboard.class);
+                intent.putExtra("type",TipoUsuario);
+                intent.putExtra("user",correo);
+                startActivity(intent);
+                 //TipoUsuario = datasnapshot.child("type").getValue().toString();
+                //TipoUsuario = datasnapshot.getValue(User.class).getType();
+                //Toast.makeText(getApplicationContext(),"Registro tipo "+TipoUsuario,Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
     //****************************************************************************************************++
 
 

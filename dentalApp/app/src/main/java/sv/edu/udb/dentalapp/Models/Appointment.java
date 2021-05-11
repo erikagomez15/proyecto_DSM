@@ -1,19 +1,31 @@
 package sv.edu.udb.dentalapp.Models;
 
-public class Appointment {
+import java.io.Serializable;
+
+public class Appointment implements Serializable {
+    private String key;
     private String user;
     private String description;
     private String date;
     private String service;
 
-    public Appointment(String user, String description, String date, String service) {
+    public Appointment(String user, String description, String date, String service,String key) {
         this.user = user;
         this.description = description;
         this.date = date;
         this.service = service;
+        this.key = key;
     }
 
     public Appointment() {
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getUser() {

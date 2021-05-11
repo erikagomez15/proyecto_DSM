@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_hom"
@@ -16,10 +15,6 @@
             android:id="@+id/nav_help"
             android:icon="@drawable/ic_baseline_help_outline_24"
             android:title="@string/item6M" />
-        <item
-            android:id="@+id/nav_addUser"
-            android:icon="@drawable/outline_add_circle_outline_24"
-            android:title="@string/item10M" />
     </group>
 
     <item android:title="@string/titleDatesM">
@@ -33,10 +28,6 @@
                     android:id="@+id/nav_seeAppointments"
                     android:icon="@drawable/ic_baseline_remove_white_eye_24"
                     android:title="@string/item2M" />
-                <item
-                    android:id="@+id/nav_reports"
-                    android:icon="@drawable/ic_baseline_library_books_24"
-                    android:title="@string/item7M" />
             </group>
         </menu>
     </item>
@@ -48,10 +39,6 @@
                     android:id="@+id/nav_seeServices"
                     android:icon="@drawable/ic_baseline_remove_white_eye_24"
                     android:title="@string/item8M" />
-                <item
-                    android:id="@+id/nav_addServices"
-                    android:icon="@drawable/ic_baseline_add_white_24"
-                    android:title="@string/item9M" />
             </group>
         </menu>
     </item>

@@ -8,15 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp">
         <TextView
             android:id="@+id/item_userAppointment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="Nombre"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:textColor="@color/azul_base_app"/>
         <TextView
             android:id="@+id/item_descriptionAppointment"

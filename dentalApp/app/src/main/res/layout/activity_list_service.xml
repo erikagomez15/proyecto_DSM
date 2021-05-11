@@ -15,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp">
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,6 +66,35 @@
             app:cornerRadius="20dp"
             tools:targetApi="lollipop"
             android:onClick="back"/>
+
+        <TextView
+            android:id="@+id/textType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_baseline_remove_blue_eye_35"
+            android:drawableLeft="@drawable/ic_baseline_remove_blue_eye_35"
+            android:fontFamily="@font/telex"
+            android:gravity="center"
+            android:textColor="@color/azul_base_app"
+            android:textSize="0dp"
+            android:text="@string/titlSL"
+            android:visibility="invisible"/>
+        <TextView
+            android:id="@+id/textUserLS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_baseline_remove_blue_eye_35"
+            android:drawableLeft="@drawable/ic_baseline_remove_blue_eye_35"
+            android:fontFamily="@font/telex"
+            android:gravity="center"
+            android:textColor="@color/azul_base_app"
+            android:textSize="0dp"
+            android:text="@string/titlSL"
+            android:visibility="invisible"/>
 
     </LinearLayout>
 

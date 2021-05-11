@@ -37,6 +37,28 @@
             android:transitionName="title_transition"
             tools:targetApi="lollipop" />
 
+        <TextView
+            android:id="@+id/txtUserAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleAU"
+            android:textSize="1sp"
+            android:fontFamily="@font/telex"
+            android:textColor="@color/azul_base_app"
+            android:textAllCaps="true"
+            android:layout_marginTop="15dp"
+            android:visibility="invisible"/>
+        <TextView
+            android:id="@+id/txtTypeUserAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleAU"
+            android:textSize="1sp"
+            android:fontFamily="@font/telex"
+            android:textColor="@color/azul_base_app"
+            android:textAllCaps="true"
+            android:layout_marginTop="15dp"
+            android:visibility="invisible"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,9 +95,9 @@
                 android:layout_margin="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Username"
+                    android:id="@+id/txtName"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,38 +117,35 @@
                 android:layout_margin="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Userlstname"
+                    android:id="@+id/txtLastName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text" />
-
+                    android:inputType="text"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Usernumber"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/telex"
                 android:hint="@string/phoneNumberCA"
-                android:textColorHint="@color/azul_base_app"
                 app:boxStrokeColor="@color/azul_base_app"
-                app:boxStrokeWidthFocused="2dp"
+                app:hintTextColor="@color/azul_base_app"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+                android:textColorHint="@color/azul_base_app"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/azul_base_app"
-                app:hintTextColor="@color/azul_base_app"
-                app:startIconDrawable="@drawable/ic_baseline_local_phone_24">
+                app:boxStrokeWidthFocused="2dp"
+                android:fontFamily="@font/telex"
+                android:layout_margin="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtPhone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="phone" />
+                    android:inputType="phone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
-
-
 
             <Button
                 android:id="@+id/btnNext"
@@ -140,7 +159,7 @@
                 android:elevation="5dp"
                 android:fontFamily="@font/telex"
                 android:transitionName="btnNext_transition"
-                android:OnClick="nextAddUser"
+                android:onClick="nextAddUser"
                 tools:targetApi="lollipop" />
 
 

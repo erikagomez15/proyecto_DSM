@@ -25,7 +25,7 @@ import sv.edu.udb.dentalapp.Models.User;
 
 public class sign_up3 extends AppCompatActivity {
 
-    private String name, lastname,phone,email,password, user, date, gender;
+    private String name, lastname,phone,email,password, user, date, gender, type;
     private RadioButton radioM, radioF;
     DatePicker fecha;
 
@@ -44,8 +44,7 @@ public class sign_up3 extends AppCompatActivity {
         radioF = findViewById(R.id.rbtnFemale);
         fecha = findViewById(R.id.DPfecha);
 
-        if (radioM.isChecked()==true) gender = radioM.getText().toString();
-        if (radioF.isChecked()==true) gender = radioF.getText().toString();
+
 
 
         Bundle bundle = getIntent().getExtras();
@@ -55,16 +54,19 @@ public class sign_up3 extends AppCompatActivity {
         email = bundle.getString("email");
         password = bundle.getString("password");
         user = bundle.getString("user");
-        date = String.valueOf(fecha.getDayOfMonth()) + "-"+String.valueOf(fecha.getMonth())+"-"+String.valueOf(fecha.getYear());
+        type = "cliente";
     }
 
     public void createUserAccount(View view){
-
+        if (radioM.isChecked()==true) gender ="Masculino";
+        if (radioF.isChecked()==true) gender ="Femenino";
+        date = String.valueOf(fecha.getDayOfMonth()) + "-"+String.valueOf(fecha.getMonth())+"-"+String.valueOf(fecha.getYear());
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        User u = new User(name,lastname,phone,user,email,password,date,gender);
+                        User u = new User(name,lastname,phone,user,email,password,date,gender,type);
+                        u.setKey(UUID.randomUUID().toString());
                         refUsuarios.push().setValue(u);
                         Toast.makeText(getApplicationContext(),"Usuario Registrado",Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(sign_up3.this,login.class);

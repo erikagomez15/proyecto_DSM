@@ -40,7 +40,7 @@
     <string name="indicationsCA">Ingresa los datos requeridos</string>
     <string name="descriptionBtnBackCA">Regresar</string>
     <!--Menu -->
-    <string name="item1M">Configuraciones</string>
+    <string name="item1M">Editar Perfil</string>
     <string name="item2M">Ver citas proximas</string>
     <string name="item3M">Agendar cita</string>
     <string name="item4M">Catalogo de servicios</string>
@@ -54,6 +54,7 @@
     <string name="titleCataloueM">Catalogo</string>
     <string name="item8M">Ver servicios</string>
     <string name="item9M">Agregar servicios</string>
+    <string name="item10M">Agregar usuario</string>
     <string name="navigation_drawer_open">Abrir Menu</string>
     <string name="navigation_drawer_close">Cerrar Menu</string>
 
@@ -99,8 +100,9 @@
     <string name="typeUserAU">Tipo de Usuario</string>
     <string name="typeUser1AU">Dentista</string>
     <string name="typeUser2AU">Cliente</string>
-    <string name="passwordAU">Contraseña temporal</string>
-    <string name="password2AU">Confirmar contraseña temporal</string>
+    <string name="passwordAU">Contraseña</string>
+    <string name="password2AU">Usuario</string>
+>>>>>>> Stashed changes
 
     <!-- Profile -->
     <string name="titleP">Perfil Usuario</string>
