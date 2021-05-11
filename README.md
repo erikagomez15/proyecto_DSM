@@ -24,3 +24,6 @@ https://framer.com/projects/Proyecto-DSM--ekcsu4IqMiI8iYVDtzHS-djPUT?node=OKYeBL
 
 LINK DEL VIDEO DE FUNCIONAMIENTO
 https://drive.google.com/file/d/1qq4_2X7-4tcpuy-knSDWqaZt0yWlkrR5/view?usp=sharing
+
+LINK A MANUAL DE USUARIO
+https://firebasestorage.googleapis.com/v0/b/dentalapp-710ed.appspot.com/o/MANUAL%20DE%20USUARIO%20DENTALAPP.pdf?alt=media&token=245584d9-4e3a-4695-a244-711c74e434ee
