@@ -140,7 +140,8 @@
                 android:elevation="5dp"
                 android:fontFamily="@font/telex"
                 android:transitionName="btnNext_transition"
-                android:OnClick="nextAddUser"
+                android:onClick=""
+
                 tools:targetApi="lollipop" />
 
 
