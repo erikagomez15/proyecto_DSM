@@ -27,3 +27,6 @@ https://drive.google.com/file/d/1qq4_2X7-4tcpuy-knSDWqaZt0yWlkrR5/view?usp=shari
 
 LINK A MANUAL DE USUARIO
 https://firebasestorage.googleapis.com/v0/b/dentalapp-710ed.appspot.com/o/MANUAL%20DE%20USUARIO%20DENTALAPP.pdf?alt=media&token=245584d9-4e3a-4695-a244-711c74e434ee
+
+LINK A MANUAL DE DESARROLLADOR
+https://firebasestorage.googleapis.com/v0/b/dentalapp-710ed.appspot.com/o/MANUAL%20DE%20DESARROLLADOR%20DENTALAPP.pdf?alt=media&token=473d698b-faf9-42c2-9d46-afcae9d7dd31
