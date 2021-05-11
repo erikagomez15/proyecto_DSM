@@ -1,6 +1,7 @@
 package sv.edu.udb.dentalapp.Models;
 
 public class User {
+    private String key;
     private String name;
     private String lastname;
     private String phone;
@@ -9,8 +10,9 @@ public class User {
     private String password;
     private String birthday;
     private String gender;
+    private String type;
 
-    public User(String name, String lastname, String phone, String user, String email, String password, String birthday, String gender) {
+    public User(String name, String lastname, String phone, String user, String email, String password, String birthday, String gender, String type) {
         this.name = name;
         this.lastname = lastname;
         this.phone = phone;
@@ -19,6 +21,18 @@ public class User {
         this.password = password;
         this.birthday = birthday;
         this.gender = gender;
+        this.type = type;
+    }
+
+    public User() {
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getName() {
@@ -83,5 +97,13 @@ public class User {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

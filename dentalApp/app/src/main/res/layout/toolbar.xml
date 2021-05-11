@@ -17,21 +17,21 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center">
 
             <TextView
                 android:id="@+id/txtUsuario"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/telex"
                 android:gravity="center"
                 android:text="Usuario"
                 android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="radioButton3" type="id" />
+    <item name="radioButton2" type="id" />
+    <item name="radioButton" type="id" />
+    <item name="rdbType1" type="id" />
+    <item name="rdbType2" type="id" />
+    <item name="btnBackDash" type="id" />
+    <item name="btnUpdate" type="id" />
+    <item name="btnDelete" type="id" />
+</resources>

@@ -42,6 +42,30 @@
             android:layout_marginTop="15dp"
             android:transitionName="title_transition"
             />
+        <TextView
+            android:id="@+id/userp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleP"
+            android:textSize="1sp"
+            android:fontFamily="@font/telex"
+            android:textColor="@color/azul_base_app"
+            android:textAllCaps="true"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/typeuserp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleP"
+            android:textSize="1sp"
+            android:fontFamily="@font/telex"
+            android:textColor="@color/azul_base_app"
+            android:textAllCaps="true"
+            android:visibility="invisible"
+
+            />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
@@ -78,9 +102,9 @@
                 android:layout_margin="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Usuname"
+                    android:id="@+id/txtNameProfile"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,10 +125,10 @@
                 android:layout_margin="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Usulastname"
+                    android:id="@+id/txtLasNameProfile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text" />
+                    android:inputType="text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,79 +151,63 @@
             android:layout_margin="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Usuemail"
+                android:id="@+id/txtEmailProfile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="textEmailAddress" />
-
+                android:inputType="textEmailAddress"
+                android:enabled="false"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:padding="5dp"
-            android:layout_margin="5dp">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="15dp"
-                android:layout_gravity="center">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/ageP"
-                    android:textColor="@color/someTextLogin"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    android:layout_marginTop="5dp"/>
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/telex"
+                    android:hint="@string/passwordAU"
+                    android:textColorHint="@color/azul_base_app"
+                    app:boxStrokeColor="@color/azul_base_app"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconTint="@color/azul_base_app"
+                    app:hintTextColor="@color/azul_base_app"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/someTextLogin"
+                    app:startIconDrawable="@drawable/ic_baseline_lock_open_24">
 
-                <TextView
-                    android:id="@+id/Usuage"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="18"
-                    android:textColor="@color/someTextLogin"
-                    android:textSize="18sp" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtPasswordProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:enabled="false"/>
 
-            </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:hint="@string/cellphoneNumberP"
-                app:boxStrokeColor="@color/azul_base_app"
-                app:hintTextColor="@color/azul_base_app"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/telex"
+                android:hint="@string/cellphoneNumberP"
                 android:textColorHint="@color/azul_base_app"
+                app:boxStrokeColor="@color/azul_base_app"
+                app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/azul_base_app"
-                app:boxStrokeWidthFocused="2dp"
-                android:fontFamily="@font/telex"
-                android:layout_margin="5dp">
+                app:hintTextColor="@color/azul_base_app"
+                app:startIconDrawable="@drawable/ic_baseline_local_phone_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Usunumber"
+                    android:id="@+id/txtPhoneProfile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/btnUpdate"

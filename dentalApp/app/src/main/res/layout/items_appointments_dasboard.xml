@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_edge"
+        android:padding="10dp"
+        android:paddingTop="20dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/userAppointmentDashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/telex"
+                    android:gravity="left"
+                    android:text="Usuario"
+                    android:textColor="@color/azul_base_app"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/sheetBottom1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:gravity="right"
+                    android:src="@drawable/ic_baseline_more_vert_24"
+                    android:onClick="openBottomSheet"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dateAppointmentDashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/telex"
+                android:text="8/10/21"
+                android:textColor="@color/someTextLogin"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/hourAppointmentDashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/telex"
+                android:text="84:30pm"
+                android:textColor="@color/someTextLogin"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/descriptionAppointmentDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/telex"
+                android:justificationMode="inter_word"
+                android:text="adsjflakdsjflakjsdfajdsfjadsfjkadsf{adflakdsfladfasdhfoahsd"
+                android:textColor="@color/someTextLogin"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
