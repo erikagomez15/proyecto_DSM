@@ -190,7 +190,7 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
                 startActivity(intent5);
                 break;
             case R.id.nav_help:
-                String URL = "https://firebasestorage.googleapis.com/v0/b/dentalapp-710ed.appspot.com/o/MANUAL%20DE%20USUARIO%20DENTALAPP.pdf?alt=media&token=d83c6ca4-60e5-4f1f-be60-28a759a22d64";
+                String URL = "https://firebasestorage.googleapis.com/v0/b/dentalapp-710ed.appspot.com/o/MANUAL%20DE%20USUARIO%20DENTALAPP.pdf?alt=media&token=245584d9-4e3a-4695-a244-711c74e434ee";
                 Uri uri = Uri.parse(URL);
                 Intent intent = new Intent(Intent.ACTION_VIEW,uri);
                 startActivity(intent);
